@@ -1,19 +1,39 @@
 package nttdata.javat1.game;
+
 public class Player {
-		private static String nick;
-		private static int credito;
-		
-		public static int contadorCredito() {
-			return credito;
-		}
-		public static void consumirCredito() {
-			credito -= 1;
-		}
-		public static void cambiarNombre(String nombre) {
-			nick = nombre;
-		}
-		public static void rondas (int rondas) {
-			credito = rondas;
-		}
+	private String nick;
+	private int credito;
+	private static int score;
+
+	public int contadorCredito() {
+		return credito;
 	}
-	
+
+	public void consumirCredito() {
+		credito -= 1;
+	}
+
+	public void cambiarNombre(String nombre) {
+		nick = nombre;
+	}
+
+	public String mostrarNombre() {
+		return nick;
+	}
+
+	public void actualizarCredito(int rondas) {
+		credito = rondas;
+	}
+
+	public int monstarCredito() {
+		return credito;
+	}
+
+	public static void actualizarScore(int puntos) {
+		score += puntos;
+	}
+
+	public int monstarScore() {
+		return score;
+	}
+}
